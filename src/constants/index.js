@@ -20,8 +20,8 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2023 - 2025 - Present",
-    role: "Junier Full Stack Developer",
+    year: "2023 - 2025",
+    role: "Full Stack Developer",
     company: "Connextar Technologies LTD.",
     description: `Developed and optimized web applications using Next.js,
                   TypeScript, and Tailwind CSS. Improved user experience by
