@@ -17,6 +17,7 @@ export const ABOUT_TEXT = [
 
 export const EXPERIENCES = [
   {
+<<<<<<< HEAD
     year: "2023-2025",
     role: "Full Stack Developer",
     company: "Connextar Technologies LTD",
@@ -27,6 +28,17 @@ export const EXPERIENCES = [
       "Recognized for outstanding contributions with an 84% salary increase and performance bonuses.",
     ],
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "REST APIs"],
+=======
+    year: "2023 - 2025",
+    role: "Full Stack Developer",
+    company: "Connextar Technologies LTD.",
+    description: `Developed and optimized web applications using Next.js,
+                  TypeScript, and Tailwind CSS. Improved user experience by
+                  creating responsive and visually stunning interfaces.
+                  Promoted for outstanding contributions, receiving an 84%
+                  salary increase and performance-based bonuses.`,
+    technologies: ["Javascript", "React.js", "Next.js", "Tailwind"],
+>>>>>>> e5fda3acf7e2ba54d8c248888c98ba382b40d177
   },
   {
     year: "2021-2023",
