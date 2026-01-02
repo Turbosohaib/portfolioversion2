@@ -1,4 +1,4 @@
-import { HERO_CONTENT } from "../constants";
+import { HERO } from "../constants";
 import profilePic from "/assets/sohaib.jpeg";
 import { motion } from "framer-motion";
 const container = (delay) => ({
@@ -22,7 +22,7 @@ const Hero = () => {
               animate="visible"
               className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
             >
-              Sohaib Shah
+              {HERO.name}
             </motion.h1>
             <motion.span
               variants={container(0.5)}
@@ -30,7 +30,7 @@ const Hero = () => {
               animate="visible"
               className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent"
             >
-              Full Stack Developer
+              {HERO.title}
             </motion.span>
             <motion.p
               variants={container(1)}
@@ -38,7 +38,7 @@ const Hero = () => {
               animate="visible"
               className="my-2 max-w-xl py-6 font-light tracking-tight"
             >
-              {HERO_CONTENT}
+              {HERO.subtitle}
             </motion.p>
           </div>
         </div>

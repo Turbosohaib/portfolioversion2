@@ -1,13 +1,11 @@
 import AboutPic from "/assets/about.jpg";
-import { ABOUT_TEXT, HERO_CONTENT } from "../constants";
+import { ABOUT_TEXT } from "../constants";
 import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <div className="border-b border-neutral-900 pb-4">
-      <h2 className="my-20 text-center text-4xl">
-        About <span className="text-neutral-500"> Me</span>
-      </h2>
+      <h2 className="my-20 text-center text-4xl">About</h2>
       <div className="flex flex-wrap">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
@@ -26,7 +24,13 @@ const About = () => {
           className="w-full lg:w-1/2"
         >
           <div className="flex justify-center lg:justify-start">
-            <p className="my-2 max-w-xl py-6">{ABOUT_TEXT}</p>
+            <div className="my-2 max-w-xl py-6">
+              {ABOUT_TEXT.map((paragraph, index) => (
+                <p key={index} className="mb-4 last:mb-0">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>

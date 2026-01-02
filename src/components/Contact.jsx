@@ -1,4 +1,3 @@
-import React from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
 
@@ -11,7 +10,7 @@ const Contact = () => {
         transition={{ duration: 0.5 }}
         className="my-10 text-center text-4xl"
       >
-        Get in Touch
+        Contact
       </motion.h2>
       <div className="text-center tracking-tighter">
         <motion.p
@@ -30,7 +29,11 @@ const Contact = () => {
         >
           {CONTACT.phoneNo}
         </motion.p>
-        <a href="#" className="border-b">
+        <a
+          href={`mailto:${CONTACT.email}`}
+          className="border-b"
+          aria-label="Email Sohaib Shah"
+        >
           {CONTACT.email}
         </a>
       </div>

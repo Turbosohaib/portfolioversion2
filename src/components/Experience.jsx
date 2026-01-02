@@ -1,4 +1,4 @@
-import { EXPERIENCES } from "../constants";
+import { EDUCATION, EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
 
 const Experience = () => {
@@ -38,9 +38,11 @@ const Experience = () => {
                     {experience.company}
                   </span>
                 </h6>
-                <p className="mb-4 text-neutral-400">
-                  {experience.description}
-                </p>
+                <ul className="mb-4 list-disc space-y-2 pl-5 text-neutral-400">
+                  {experience.bullets.map((bullet, bulletIndex) => (
+                    <li key={bulletIndex}>{bullet}</li>
+                  ))}
+                </ul>
                 {experience.technologies.map((tech, index) => (
                   <span
                     key={index}
@@ -53,6 +55,27 @@ const Experience = () => {
             </div>
           );
         })}
+      </div>
+      <div className="mt-12">
+        <h3 className="mb-6 text-center text-2xl font-semibold">Education</h3>
+        {EDUCATION.map((education, index) => (
+          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
+            <div className="w-full lg:w-1/4">
+              <p className="mb-2 text-sm text-neutral-400">{education.year}</p>
+            </div>
+            <div className="w-full max-w-xl lg:w-3/4">
+              <h6 className="mb-2 font-semibold">{education.institution}</h6>
+              <p className="mb-3 text-sm text-neutral-300">
+                {education.program}
+              </p>
+              <ul className="list-disc space-y-2 pl-5 text-neutral-400">
+                {education.bullets.map((bullet, bulletIndex) => (
+                  <li key={bulletIndex}>{bullet}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
